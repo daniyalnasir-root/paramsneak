@@ -102,9 +102,9 @@ local, state, or federal law.
 
 ## Author
 
-**Daniyal Nasir** &nbsp;|&nbsp; Penetration Tester &nbsp;|&nbsp; VAPT Consultant &nbsp;|&nbsp; Bug Bounty Hunter &nbsp;|&nbsp; Doha, Qatar
+**Daniyal Nasir** &nbsp;|&nbsp; Cybersecurity Consultant &nbsp;|&nbsp; Penetration Tester &nbsp;|&nbsp; VAPT Consultant &nbsp;|&nbsp; Bug Bounty Hunter &nbsp;|&nbsp; Doha, Qatar
 
-Ten years of hands-on offensive security work; OSCP, LPT, CPENT, CEH, CISA, CISM, and CASP+ certified.
+Senior **offensive security** professional with 10+ years delivering **web application penetration testing**, **API security testing**, **mobile application pentesting**, and **cloud security assessments** for Fortune 500 enterprises and global SaaS companies. Active **ethical hacker** with disclosed vulnerabilities across major **bug bounty programs**, plus consulting on **secure code review**, **threat modelling**, and **DevSecOps** integration. Holds **OSCP**, **LPT**, **CPENT**, **CEH**, **CISA**, **CISM**, and **CASP+** certifications.
 
 LinkedIn: https://www.linkedin.com/in/daniyalnasir
 Website:  https://www.daniyalnasir.com
