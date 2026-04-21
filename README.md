@@ -100,6 +100,15 @@ Run it only against systems you own or have explicit written permission to test.
 The author accepts no liability for misuse. Unauthorized use may violate
 local, state, or federal law.
 
+## Author
+
+**Daniyal Nasir** &nbsp;|&nbsp; Penetration Tester &nbsp;|&nbsp; VAPT Consultant &nbsp;|&nbsp; Bug Bounty Hunter &nbsp;|&nbsp; Doha, Qatar
+
+Ten years of hands-on offensive security work; OSCP, LPT, CPENT, CEH, CISA, CISM, and CASP+ certified.
+
+LinkedIn: https://www.linkedin.com/in/daniyalnasir
+Website:  https://www.daniyalnasir.com
+
 ## License
 
 MIT, see [LICENSE](LICENSE).
